@@ -1,0 +1,29 @@
+<h1>Practice Mode</h1>
+<label>
+    <input
+        type="checkbox"
+        [checked]="persistent"
+        (change)="persistent = !persistent"
+    >
+    Persistent Games
+</label>
+<br>
+<br>
+<br>
+<div
+    class="countdown"
+    *ngIf="countdown() > 0 && showCountdown()"
+>
+    {{countdown()}}
+</div>
+<button (click)="play()">Play</button>
+
+<h2>Connected Bots</h2>
+<div class="players">
+    <div
+        *ngFor="let player of queue"
+        class="player"
+    >
+        {{player}}
+    </div>
+</div>

@@ -1,0 +1,6 @@
+module Pods_kerfuffle_swift_sdk {
+  umbrella header "Pods-kerfuffle_swift_sdk-umbrella.h"
+
+  export *
+  module * { export * }
+}

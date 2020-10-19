@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <style>
+            body {
+                padding:0;
+                margin:0;
+                font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+                color:#3d4752;
+                user-select: none;
+            }
+        .canvas-container {
+            position:absolute;
+            left:300px;
+            top:0;
+            right:0;
+            bottom:0;
+        }
+        .with-scrubber {
+            top: 35px;
+        }
+        canvas {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .replay {
+            position: absolute;
+            left: 240px;
+            top: 2px;
+            cursor: pointer;
+        }
+        .scrubber {
+            height: 35px;
+            background: #adadad;
+            position: absolute;
+            left: 300px;
+            right: 0;
+            top: 0;
+            cursor: ew-resize;
+            overflow: hidden;
+        }
+        .marker {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            transform: translateX(-1px);
+            background: white;
+        }
+        .progress {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            background: black;
+            opacity: 0.5;
+        }
+        .title {
+            position:absolute;
+            top:0px;
+            left:10px;
+            width:280px;
+            height:40px;
+            font-size:30px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .timeleft {
+            position:absolute;
+            top:40;
+            left:10px;
+            width:280px;
+            height:30px;
+            font-size:24px;
+        }
+        .scoreboard {
+            position:absolute;
+            top:80px;
+            left:10px;
+            width:280px;
+            bottom:0;
+            font-size:24px;
+            list-style:none;
+            padding:0;
+            margin:0;
+            overflow:hidden;
+        }
+
+        .scoreboard li {
+            position:absolute;
+            height:30px;
+            width:240px;
+            padding:0 0 0 36px;
+            margin:0;
+            transition:top .5s;
+        }
+
+        .scoreboard li .swatch {
+            position:absolute;
+            left:0;
+            top:0;
+            bottom:0;
+            width:30px;
+        }
+
+        .hatch {
+            background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAABB0lEQVQ4T63U8UrDMBAG8O/LxBamewWrTyMbKlMRH1GGc6g49jTbfIXVsnRoTlI3ybDtktn8cwTCj8vlcpylS8HP+lJQ9yfH0eN67x3mi7xvaAYEDuiA/0Mz3TNGRpymS00gctLZP9NMdzn70Oci8kzg0EVFeH3WiV+8770+SBvLUAE+IbwJRQuwSfQXbArdAptA/4AO+mr7alMS35qWghaZLvQlKMNQtBKsQ0lenB7Fk7KWqgVr0BXJqzJ0JxiKeoEhqDe4QUl5AtByXn/r+kGgRd7T/NbAPFShweAulPNMd5N2PA6dKhWZ5nYerpRiP2nHb02gxcS230qJuks60WhPdACgKN83QlXKGfq74Z4AAAAASUVORK5CYII=);
+            background-repeat:repeat;
+        }
+
+        .scoreboard li .score {
+            position:absolute;
+            top:0;
+            bottom:0;
+            right:0;
+        }
+        </style>
+        <script
+            type="module"
+            src="js/paperio.js"
+        ></script>
+    </head>
+</html>

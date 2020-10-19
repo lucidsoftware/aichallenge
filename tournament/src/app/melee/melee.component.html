@@ -1,0 +1,20 @@
+<h1>{{bracket.name}} Melee</h1>
+
+<div class="players">
+    <div
+        *ngFor="let player of players, let i = index"
+        class="player"
+        [class.online]="client.playerOnline(player)"
+        [class.playing]="client.playerPlaying(player)"
+    >
+        <input
+            type="checkbox"
+            [id]="'player' + i"
+            [checked]="isWinner(player)"
+            (click)="toggleWinner(player)"
+        >
+        <label [for]="'player' + i">{{player}}</label>
+    </div>
+</div>
+
+<button (click)="play()">Play</button>

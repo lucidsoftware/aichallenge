@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "@types/node": "^10.12.18",
+    "typescript": "3.3.3333"
+  }
+}

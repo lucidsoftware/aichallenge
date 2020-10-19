@@ -1,0 +1,44 @@
+.players {
+  border:1px solid #aaa;
+  width:300px;
+
+  .player {
+    padding:4px 8px;
+    height:20px;
+
+    display:flex;
+    border-bottom:1px solid #aaa;
+
+    &.online {
+      background: #ddffdd;
+    }
+
+    &.playing {
+      background: #ffdddd;
+    }
+
+    label {
+      flex-grow:1;
+    }
+    &:last-child {
+      border:0;
+    }
+  }
+}
+
+input[type=checkbox] {
+  display:none;
+}
+
+input[type=checkbox] + label {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARQSURBVGhD7VhJaxRBGC1iFBURoxdBvXiIHlyDYtAkCh5dL4oLKC5nL/4A/QGKxJPikggqKHpwIWYxERJB41kPORhi9GA8hJhESVzm873qr0Onp2YyPdPdiZAHD5rqqvde1dTWY2YxixmCTIM5A/aA38HmzB1zQB6aOSSfUdYGjtg6t81pbTYzkGk0Z6XRSJgoH0Pgcec7dFibTy8wupsR9IcrZD6iA6NsqzLpQa6bhZgCtQhwHMHriwnvk22tBrWo+cAsUJtkAKNq8LMrTBxEZ/rpoXbxgqMzZfi75SJPK0Q6Vol0rRZ5W+mRzyx7gnes42qrtJ1I4peAcJ3L0PIeQrUuF3m3Blw7BVGHdfN0hF5qGx8gesJlJo8XeaPMcN0I17lC5OVikRfzRJ6XeeQzy/iOdViXbR6hrUOTXmobHyB6NcuM06VbR5bhGPQZyvORdbpQ13YYpEZIF15X1DYeYIeogujk3YYj74fvWOoOm4/ty7y2JLUC2tarwWxS+9KAhcsTdiRoYOevP22KCe/T7wS1QmuCniWf2BiJU0HRCdoFC2NOBVewKOxc6Wm1QNPhhcPupMaJDoxCT5bovbmeIRdjE55doaKQa8IubNCxMyHDe40THfgFhsOCdtGxA1y0rkDFkFrU5DkR8kMHBjVOdKADrWFBadefnNuiK0wxbIMWNTugHfJDB5o1TnSgA/vDgvIapyrNmgrYMgsltajJEzvkhzWwV+NEh1wwZRiByddhf/fhAeUKUwypRU1qB7wwgGPMoHGiw36M/M8dwD68LyhomcQU4k5ETdcUajB7NE50oHFbWHBiEXPhucIUw/yLuEXjREf62+iSyV4ehzROdKD3OQ4yHDpJHGS8lof8MIgfNE50oHHyV4muBK8SBH6F7MscR8rfjXghcwUrhP5l7g20krjM+ch5naZ5sZ1gG/86HvqwsV5xXad9QLQ+aGIZ/KDhVCj4g0anDZnGBw0BUfcnJUfPn05cjFwX3BYZlAcUyTODZdxt7IJFXbZJ+ZMy90c95y8XYaEf9azruDr7pJfaxoeC/1bhXs4DiSc2R5nkM8v4Lk9wEh6fEvuDC+LVGJ1+l3EcpDY91C4ZYHeYj12pduCQkaFzML3pDlMI2ZYaA4fxDE1qq03y+LjOCPllN8xvuAPmI9uwra+jsulheJuR/o2e+bdjOULe8uh6xzZsSw1qqWx6kFoj49uN9K7XThwx8uuykb/XjPy8aOTrQZTzHchnlvEd67Au2/SC1KCWyqYHmpIjGD0GYaAoZMdHqz2Nae0AyVEcqDLSp78Gp8XgFiN/ajwObvXKGLpvA34B1PVH3qfKpoegeRxU2fTgClEKVTY9uEKUQpVND64QZKbG/M7UmleZOnMez5WWfGYZ3rnakCqbHoLmCDcI3kfAo1JjKrRKFviOdWxdtAlqaJX0gAA9CHNJdphdstOUa3HBYBu2pQa1tHgWs0gXxvwD7zH4qvIFOAgAAAAASUVORK5CYII=');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y:center;
+  background-size: 16px 16px;
+  filter:grayscale();
+}
+
+input[type=checkbox]:checked + label {
+  filter:none;
+}

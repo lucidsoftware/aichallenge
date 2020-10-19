@@ -1,0 +1,51 @@
+<h1>{{bracket.name}}</h1>
+
+<div class="tiers">
+    <div
+        *ngFor="let tier of bracket.matches"
+        class="tier"
+    >
+        <div
+            *ngFor="let match of tier"
+            class="match"
+        >
+            <div class="name">
+                <div>{{match.name}}</div>
+                <button
+                    (click)="play(match)"
+                    [disabled]="!matchReady(match)"
+                >
+                    Play
+                </button>
+            </div>
+            <div
+                *ngFor="let slot of match.slots"
+                class="slot"
+                [class.online]="client.playerOnline(slot.player)"
+                [class.playing]="client.playerPlaying(slot.player)"
+            >
+                <input
+                    *ngIf="!!slot.player"
+                    type="checkbox"
+                    [id]="'slot'+slot.id"
+                    (click)="toggleWinner(slot, match)"
+                    [checked]="slot.winner"
+                >
+                <label [for]="'slot'+slot.id">{{slot.player}}</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="buttons">
+    <button (click)="melee()">Melee</button>
+    <button (click)="showSeed = true">Seed bracket</button>
+</div>
+
+<div
+    class="seed"
+    *ngIf="showSeed"
+>
+    <textarea #seedNames>{{defaultNames}}</textarea>
+    <button (click)="seed(seedNames.value)">Save</button>
+</div>

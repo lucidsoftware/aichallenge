@@ -1,0 +1,35 @@
+<h3><a href="https://docs.google.com/presentation/d/1jpYp-LWi4QsKOKx_ckuyR44upAjfE1kau2-7nNRBfb0/edit?usp=sharing" target="_blank">Intro Slides</a></h3>
+
+<a [routerLink]="['/practice']"><h2>Practice</h2></a>
+
+<h2>Tournament Brackets</h2>
+<div *ngFor="let name of bracketNames">
+    <a [routerLink]="['/bracket', name]">{{name}}</a>
+</div>
+
+<h2>Main Server information</h2>
+<p>Host: localhost</p>
+<p>Port: 80</p>
+
+<h2>Starter Code Kits</h2>
+Download and unzip. README.md will have instructions.
+
+<p><a href="/kerfuffle_jvm_sdk.zip">JVM (Scala, Java, Kotlin)</a></p>
+<p><a href="/kerfuffle_ts_sdk.zip">TypeScript</a></p>
+<p><a href="/kerfuffle_js_sdk.zip">JavaScript</a></p>
+<p><a href="/kerfuffle_python_sdk.zip">Python 3</a></p>
+<p><a href="/kerfuffle_cpp_sdk.zip">C++</a></p>
+<p><a href="/kerfuffle_cs_sdk.zip">C#</a></p>
+<p><a href="/kerfuffle_swift_sdk.zip">Swift</a></p>
+
+<h2>Match History</h2>
+<ul>
+    <li *ngFor="let name of history">
+        <a
+            [href]="gameLink(name)"
+            target="_blank"
+        >
+            {{name}}
+        </a>
+    </li>
+</ul>
