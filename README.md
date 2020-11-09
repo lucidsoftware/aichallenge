@@ -1,5 +1,9 @@
 # AI Challenge
 
+**Game Rules:**
+
+[Game Rules](https://docs.google.com/presentation/d/1jpYp-LWi4QsKOKx_ckuyR44upAjfE1kau2-7nNRBfb0#slide=id.p)
+
 **Compile the TypeScript:**
 
 ```bash
